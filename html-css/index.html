@@ -1,0 +1,72 @@
+<!-- basic commands -->
+<!-- h1 to h6 -->
+<h1>Hello World</h1>
+<h2>CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+<b>bold</b>
+<i>italic</i>
+
+<!-- dont remove extra spaces on previous or after it shows as it is. in <p> </p> tag it removes extra spaces from both sides -->
+<pre> abc abc  </pre>
+
+<!-- header,footer -->
+<main> 
+  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching    attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+</main>
+
+<!-- insert image -->
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="logo"> 
+
+<!-- anchor tag -->
+<a href="https://www.freecatphotoapp.com">cat photos</a>
+
+<!-- jump to footer(we can jump to the webpage or any tag as well) -->
+<a href="#footer">Jump to Bottom"</a>
+<footer id="footer">Copyright Cat Photo App</footer>
+
+<!-- nested tag -->
+ <!-- target _blank opens in new tab, _self opens in same tab -->
+<p>
+    View more  <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>
+</p>
+
+<!-- dead link -->
+<a href="#" target="_blank">cat photos</a>
+
+<!-- unordered list -->
+<ul>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+</ul>
+
+<!-- orderd list -->
+<ol>
+    <li> B </li>
+    <li> B </li>
+    <li> B </li>
+</ol>
+
+
+<!-- textbox which takes an input -->
+ <!-- placeholder is used to show default data in the textfield  -->
+<input type="text" placeholder="cat photo URL">
+
+<!-- form and button-->
+ <!-- if we write required , the field is mandtory to fill -->
+ <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+
+<!-- checkbox -->
+<label for="indoor">
+    <input id="indoor" type="radio" name="indoor-outdoor">
+    indoor
+</label>
+<label for="outdoor">
+    <input id="outdoor" type="radio" name="indoor-outdoor">
+    outdoor
+</label>
