@@ -1,0 +1,132 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 600;
+    
+}
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.container
+{
+    margin: 0 10%; 
+    overflow: hidden;
+}
+body
+{
+    background-color: black;
+    place-items: center;
+}
+
+
+.trusted-partner__shadow
+{
+    /* opacity: 0.5; */
+    /* margin: 0 10%;  */
+    /* overflow: hidden; */
+    height: 70px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    
+}
+
+.trusted-partner__content
+{
+    
+    display: flex;
+    /* animation: scroll 15s linear infinite; */
+}
+
+.trusted-partner__title
+{
+    color: white;
+    margin-top: 20%;
+    margin-bottom: 3%;
+    
+}
+
+.trusted-partner__title p
+{
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.trusted-partner__content img
+{
+    height: 7%;
+    width: 7%;
+    margin-left: 3%;
+    margin-right: 3%;
+	
+}
+@keyframes  scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+
+/* :root {
+    --maxSize: 1440px;
+}
+
+@media (max-width: var(--maxSize)) {
+    .trusted-partner__content img {
+        height: calc(11 * var(--maxSize) / 1440); 
+        width: calc(11 * var(--maxSize) / 1440);
+        margin-left: calc(5 * var(--maxSize) / 1440);
+        margin-right: calc(5 * var(--maxSize) / 1440); 
+    }
+    .trusted-partner__title p
+    {
+        font-size: calc(22 * var(--maxSize) / 1440);
+    } 
+} */
+
+@media (max-width: 1440px) {
+    .trusted-partner__content img
+    {
+        height: 11%;
+        width: 11%;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .trusted-partner__content img
+    {
+        height: 20%;
+        width: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
+        
+    }
+}
+
+@media(max-width: 450px) {
+    .trusted-partner__content img
+    {
+        height: 30%;
+        width: 30%;
+        margin-left: 7%;
+        margin-right: 7%;
+        
+    }
+    .trusted-partner__title p
+    {
+        font-size: 22px;
+    } 
+}
+
+
+
+
