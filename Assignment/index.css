@@ -5,6 +5,7 @@
     font-family: 'Poppins';
     font-weight: 600;
     
+    
 }
 .poppins-medium {
     font-family: "Poppins", sans-serif;
@@ -31,14 +32,18 @@ body
     /* overflow: hidden; */
     height: 70px;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    display: inline-block;
+    white-space: nowrap;
+    
     
 }
 
 .trusted-partner__content
 {
     
-    display: flex;
-    /* animation: scroll 15s linear infinite; */
+    display: inline-block;
+    animation: slide 15s linear infinite;
+    
 }
 
 .trusted-partner__title
@@ -59,11 +64,11 @@ body
 {
     height: 7%;
     width: 7%;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-right: 3%;
 	
 }
-@keyframes  scroll {
+@keyframes  slide {
 	from {
 		transform: translateX(0);
 	}
@@ -95,8 +100,8 @@ body
     {
         height: 11%;
         width: 11%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 3%;
+        margin-right: 0%;
         
     }
 }
