@@ -34,7 +34,6 @@ body {
 .trusted-partner__content {
     width: var(--marquee-width);
     height: var(--marquee-height);
-    
     color: #eee;
     overflow: hidden;
     position: relative;
