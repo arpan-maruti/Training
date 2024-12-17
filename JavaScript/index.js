@@ -302,23 +302,6 @@ let text5 = "Visit W3Schools!, W3Schools";
 let n3 = text5.replaceAll("W3Schools","Arpan");
 console.log(n3);
 
-// class 
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-  age()
-  {
-    const date=new Date();
-    return date.getFullYear()-this.year;
-  }
-}
-const myCar1 = new Car("Ford", 2014);
-const myCar2 = new Car("Audi", 2019);
-
-console.log(myCar1.age());
-
 // Counter By Object 
 // Define object
 const obj = {counter:0};
@@ -360,4 +343,158 @@ function myCalculator(num1, num2, myCallback) {
 
 myCalculator(5, 5, myDisplayer);
 
+// class
+class Car
+{
+  constructor(brand)
+  {
+    this.__cname=brand;
+  }
+  set cname(x)
+  {
+    this.__cname=x;
+  }
+  get cname()
+  {
+    return this.__cname;
+  }
+}
+const myCar=new Car("Alto");
+myCar.__cname="Ford";
+console.log(myCar.cname);
 
+
+// setInterval will call function after every interval of time 
+setTimeout(timeAlert,2000);
+function timeAlert()
+{
+  alert("FN called after 2 seconds")
+}
+
+function  myDisplayer(some)
+{
+  console.log(some);
+}
+
+// Promise
+let myPromise=new Promise(function(myResolve,myReject){
+  let x=0;
+  setTimeout(
+    function(){
+      if(x==0)
+        {
+          myResolve("OK");
+        }
+        else
+        {
+          myReject("Error");
+        }
+    },1000
+  )
+})
+
+myPromise.then(
+  function(value) {
+    myDisplayer(value);
+  },
+  function(error) {
+    myDisplayer(error);
+  }
+)
+
+// async/await 
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    setTimeout(function() {resolve("I love You !!");}, 3000);
+  });
+  console.log(await myPromise);
+}
+
+myDisplay();
+
+document.write(Date());
+
+// JS HTML DOM 
+function validateForm()
+{
+  let x=document.forms["myForm"]["num"].value;
+  if(x<=0 || x>=11)
+  {
+    alert("num btw 1 to 10");
+    return false;
+  }
+  else
+  {
+    console.log("num"+x);
+  }
+}
+
+// Browser BOM 
+console.log(screen.width + ":"+ screen.availWidth+ " " + screen.height+ ":"+ screen.availHeight + " "+ screen.colorDepth);
+
+console.log(window.location.href + " "+ window.location.hostname + " "+ window.location.port);
+
+function newDoc() {
+  window.location.assign("https://www.w3schools.com");
+  // window.history.back();
+  // window.history.forward();
+}
+
+console.log(navigator.appCodeName);
+
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("confirmBtn").innerHTML = txt;
+}
+
+function promptFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("promptBtn").innerHTML = text;
+}
+
+// cookie 
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}

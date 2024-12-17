@@ -23,6 +23,20 @@
     <hr>
     <p id="objDisp5"></p>
     <hr>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        Number : <input type="number" name="num">
+        <input type="submit" value="submit">
+    </form>
+    <hr>
+    <input type="button" value="Load new document" onclick="newDoc()">
+    <hr>
+    <button onclick="myFunction()">Confirm</button>
+    <p id="confirmBtn"></p>
+    <hr>
+    <button onclick="promptFunction()">Prompt</button>
+    <p id="promptBtn"></p>
+
     <script src="index.js"></script>
+
 </body>
 </html>
