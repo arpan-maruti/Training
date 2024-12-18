@@ -498,3 +498,20 @@ function checkCookie() {
      }
   }
 }
+
+// JSON parse and Stringify 
+// Storing data:
+const myObj1 = {name: "John", age: 31, city: "New York"};
+const myJSON = JSON.stringify(myObj1);
+localStorage.setItem("testJSON", myJSON);
+
+const myObj2= JSON.parse(localStorage.getItem("testJSON"));
+console.log(myObj2.name);
+
+// AJAX 
+const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    console.log(this.responseText);
+  }
+  xhttp.open("GET", "ajax_data.txt");
+  xhttp.send();
