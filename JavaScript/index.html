@@ -35,8 +35,18 @@
     <hr>
     <button onclick="promptFunction()">Prompt</button>
     <p id="promptBtn"></p>
-
+    <hr>
+    <input id="webForm" type="number" max="300" min="100" required>
+    <button onclick="webFormClick()">webForm</button>
+    <br>
+    <p id="webFormAnswer"></p>
+    <hr>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <br>
+    <output id="resultWorker"></output>
+    <hr>
     <script src="index.js"></script>
-
+   
 </body>
 </html>

@@ -515,3 +515,77 @@ const xhttp = new XMLHttpRequest();
   }
   xhttp.open("GET", "ajax_data.txt");
   xhttp.send();
+
+  // Web Forms API
+  function webFormClick()
+  {
+    const webFormInput= document.getElementById("webForm");
+    if(!webFormInput.checkValidity())
+    {
+      document.getElementById("webFormAnswer").innerHTML= webFormInput.validationMessage;
+    }
+    else {
+      document.getElementById("demo").innerHTML = "Input OK";
+    } 
+  }
+
+  // document.getElementById("id1").validity.rangeUnderflow
+  // document.getElementById("id1").validity.rangeOverflow
+
+
+  // Web History API
+
+  // properties
+  // window.history.back();
+  // window.history.go(-2);
+  // window.history.forward();
+  console.log(window.history.length);
+
+
+  // Web Storage API
+
+  localStorage.setItem("name", "Arpan");
+  console.log(localStorage.getItem("name"));
+  console.log(localStorage.key(1));
+
+  sessionStorage.setItem("name", "Arpan");
+  console.log(sessionStorage.getItem("name"));
+
+  // localStorage.clear(); 
+  // sessionStorage.removeItem("test1"); 
+
+
+  // Web Worker API
+  let w;
+  function startWorker()
+  {
+    if(typeof(w)=="undefined")
+    {
+      w= new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("resultWorker").innerHTML = event.data;
+    }
+  }
+
+  function stopWorker()
+  {
+    w.terminate();
+    w=undefined;
+  }
+
+
+// Web Fetch API
+async function getText(file)
+{
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  console.log(myText);
+}
+
+console.log("File Text");
+getText("demo_workers.js");
+
+//Web Geolocation API
+console.log(navigator.geolocation.getCurrentPosition((position)=>console.log(`Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`)));
+console.log(navigator.geolocation.watchPosition((position)=>console.log(`Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`)));
