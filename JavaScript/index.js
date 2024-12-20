@@ -365,7 +365,7 @@ console.log(myCar.cname);
 
 
 // setInterval will call function after every interval of time 
-setTimeout(timeAlert,2000);
+//setTimeout(timeAlert,2000);
 function timeAlert()
 {
   alert("FN called after 2 seconds")
@@ -556,22 +556,13 @@ const xhttp = new XMLHttpRequest();
 
 
   // Web Worker API
-  let w;
-  function startWorker()
+  function onStartClick()
   {
-    if(typeof(w)=="undefined")
-    {
-      w= new Worker("demo_workers.js");
+    if (window.Worker) {
+      const worker = new Worker("demo_workers.js");
+      worker.onmessage = (e) => document.getElementById("outputWorker").textContent = e.data;
+      document.getElementById("start").onclick = () => worker.postMessage("");
     }
-    w.onmessage = function(event) {
-      document.getElementById("resultWorker").innerHTML = event.data;
-    }
-  }
-
-  function stopWorker()
-  {
-    w.terminate();
-    w=undefined;
   }
 
 
@@ -589,3 +580,109 @@ getText("demo_workers.js");
 //Web Geolocation API
 console.log(navigator.geolocation.getCurrentPosition((position)=>console.log(`Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`)));
 console.log(navigator.geolocation.watchPosition((position)=>console.log(`Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`)));
+
+
+// JS Window
+// window.innerHeight - the inner height of the browser window (in pixels)
+// window.innerWidth - the inner width of the browser window (in pixels) 
+// window.open() - open a new window
+// window.close() - close the current window
+// window.moveTo() - move the current window
+// window.resizeTo() - resize the current window
+
+
+// JS Screen 
+// screen.width
+// screen.height
+// screen.availWidth
+// screen.availHeight
+// screen.colorDepth
+// screen.pixelDepth
+
+// JS Location 
+// window.location.href returns the href (URL) of the current page
+// window.location.hostname returns the domain name of the web host
+// window.location.pathname returns the path and filename of the current page
+// window.location.protocol returns the web protocol used (http: or https:)
+// window.location.assign() loads a new document
+
+// JS History 
+// history.back() - same as clicking back in the browser
+// history.forward() - same as clicking forward in the browser 
+
+// JS Navigator 
+// navigator.cookieEnabled
+// navigator.appCodeName
+// navigator.platform
+
+
+//slice & splice
+let z= [1,2,3,4];
+z.splice(1,1,5);
+console.log(z);
+
+console.log(z.slice(1,3));
+
+//search & indexOf
+//both are same but in indexOf we can pass search from index (Ex. indexOf("def",5)) and in indexOf we cant use regular expression.
+let s="abc def ghi";
+console.log(s.search("def"));
+console.log(s.indexOf("def"));
+//includes() method only returns true or false wheather matched or not
+//startsWith() & endsWith() also return Boolean.
+
+
+console.log(Math.round(4.4));
+console.log(Math.ceil(4.4));
+console.log(Math.floor(4.4));
+console.log(Math.trunc(4.4));
+console.log(Math.sign(-4.4));
+console.log(Math.pow(2.4));
+console.log(Math.sqrt(64));
+console.log(Math.abs(-4.4));
+
+
+//The Nullish Coalescing Operator (??)
+let nm=null;
+console.log( nm ?? "nothing");
+
+// The Optional Chaining Operator (?.) 
+let car = {type:"Fiat", model:"500", color:"white"};
+console.log(car?.name);
+
+// call & bind & apply 
+function introduce(greeting, punctuation) {
+  console.log(`${greeting}, I am ${this.firstName} ${this.lastName}${punctuation}`);
+}
+
+// Using call
+introduce.call(person, "Hello", "!");
+
+// Using apply
+introduce.apply(person, ["Hi", "."]);
+
+// Using bind
+const boundIntroduce = introduce.bind(person);
+boundIntroduce("Hey", "!"); 
+
+// Object methods 
+const personA = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+const personB = { firstName: "Anne", lastName: "Smith" };
+Object.assign(personA, personB);
+console.log(personA);
+Object.defineProperty(personA, "year", { value: "2008" });
+Object.preventExtensions(personB);
+personB.q = "q";
+console.log(personB.q);
+Object.seal(personB);
+delete personB.firstName;
+Object.freeze(personB);
+personB.firstName = "q";
+console.log(personB);
+
+

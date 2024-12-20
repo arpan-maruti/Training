@@ -1,12 +1,19 @@
-let i=0;
-function timeCount()
-{
-    
-    i++;
-    postMessage(i);
-    setTimeout("timeCount()",500);
-}
-timeCount();
 
-//can't access DOM Element in Worker Thread
-// console.log(window.location.href);
+try {
+    document.getElementById("outputWorker"); 
+} catch (exception){
+    console.log(exception);
+    postMessage("DOM access is not allowed in Web Workers.");
+}
+
+// async function callDemoWorker()
+// {
+//     try {
+//         let myObject = await fetch("ajax_data.txt");
+//         let myText = await myObject.text();
+//         postMessage(myText);
+//     } catch {
+//         postMessage("DOM access is not allowed in Web Workers.");
+//     }
+// }
+// callDemoWorker();
