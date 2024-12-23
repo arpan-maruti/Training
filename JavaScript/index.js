@@ -324,11 +324,34 @@ Object.defineProperty(obj, "subtract", {
 });
 
 // Play with the counter:
-obj.reset;
-obj.add = 5;
-obj.subtract = 1;
-obj.increment;
-obj.decrement;
+function onResetClick()
+{
+  obj.reset;
+  document.getElementById("showCounter").innerHTML="Counter is : "+obj.counter;
+}
+function onAdd5Click()
+{
+  obj.add = 5;
+  document.getElementById("showCounter").innerHTML="Counter is : "+obj.counter;
+}
+function onSubs5Click()
+{
+  obj.subtract = 5;
+  document.getElementById("showCounter").innerHTML="Counter is : "+obj.counter;
+}
+function onIncClick()
+{
+  obj.increment;
+  document.getElementById("showCounter").innerHTML="Counter is : "+obj.counter;
+}
+function onDecClick()
+{
+  obj.decrement;
+  document.getElementById("showCounter").innerHTML="Counter is : "+obj.counter;
+}
+
+
+
 
 console.log(obj.counter);
 
@@ -463,42 +486,6 @@ function promptFunction() {
   document.getElementById("promptBtn").innerHTML = text;
 }
 
-// cookie 
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
-
 // JSON parse and Stringify 
 // Storing data:
 const myObj1 = {name: "John", age: 31, city: "New York"};
@@ -507,14 +494,6 @@ localStorage.setItem("testJSON", myJSON);
 
 const myObj2= JSON.parse(localStorage.getItem("testJSON"));
 console.log(myObj2.name);
-
-// AJAX 
-const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    console.log(this.responseText);
-  }
-  xhttp.open("GET", "ajax_data.txt");
-  xhttp.send();
 
   // Web Forms API
   function webFormClick()
