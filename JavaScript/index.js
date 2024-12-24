@@ -702,4 +702,3 @@ Object.freeze(personB);
 personB.firstName = "q";
 console.log(personB);
 
-
