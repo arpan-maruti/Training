@@ -1,6 +1,7 @@
 "use strict";
 let firstName = "Arpan";
 let firstName1 = "Arpan";
+
 let firstName2 = "Arpan";
 const json = JSON.parse("55");
 console.log(typeof json);
