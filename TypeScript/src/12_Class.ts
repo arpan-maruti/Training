@@ -11,7 +11,7 @@ class Person4 {
 }
   
 const person3 = new Person4("Arpan");
-console.log(person3.getName());
+console.log(person3.getName()); // Arpan
 
 // Abstract Class 
 // An abstract class is a class that cannot be instantiated. It is used to define a blueprint for other classes.
@@ -37,5 +37,5 @@ abstract class Polygon {
   
   const myRect = new Rectangle1(10,20);
   
-  console.log(myRect.getArea());
+  console.log(myRect.getArea()); // 200
 

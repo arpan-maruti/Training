@@ -18,4 +18,4 @@ const personEmployee: PersonEmployee = {
     position: "Developer",
 };
 
-console.log(personEmployee);
+console.log(personEmployee); // { name: 'Alice', age: 30, employeeId: 101, position: 'Developer' }

@@ -24,9 +24,9 @@ printMileage(undefined); // Prints 'Mileage: Not Available'
 // Example of Null Assertion : The ! operator is used to tell TypeScript that a value is not null or undefined.
 function getValue(): string | undefined {
     return 'hello';
-  }
-  let value3 = getValue();
-  console.log('value length: ' + value3!.length);
+}
+let value3 = getValue();
+console.log('value length: ' + value3!.length); // value length: 5
   
 
 //Example of Array bounds handling : TypeScript will not throw an error if you try to access an index that is out of bounds.

@@ -2,7 +2,7 @@
 function makePair<S,T>(x:S,  y:T): [S,T]{
     return [x,y];
 }
-console.log(makePair<string, number>("A",1));
+console.log(makePair<string, number>("A",1)); // [ 'A', 1 ]
 
 //Generic Class
 class NamedValue<T> {

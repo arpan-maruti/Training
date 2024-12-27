@@ -13,7 +13,7 @@ const person1:Person2 =
     Name: myName,
     Age: myAge
 }
-console.log(person1);
+console.log(person1); // { Name: 'Arpan', Age: 20 }
 
 //Can't Merge
 type User = {

@@ -25,7 +25,7 @@ interface smFn2
     b:number;
 }
 let summation2: Record<string, number> = {a:10,b:10}; //Record is used to define the type of key and value pair.
-console.log(summation2);
+console.log(summation2);    //{ a: 10, b: 10 }
 
 //UTILITY TYPE: Omit
 interface smFn3

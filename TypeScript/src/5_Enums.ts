@@ -5,8 +5,8 @@ enum CardinalDirections {
     West
   };
   // logs 5
-  console.log(CardinalDirections.North);
-  
+  console.log(CardinalDirections.North);  
+   
   // logs 8
   console.log(CardinalDirections.West);
 

@@ -11,7 +11,7 @@ let firstName2: string = "Arpan";
 
 //What type of data JSON file will return, We don't know.So TypeScript Will guess the type of data.Thats called "INFER".
 const json = JSON.parse("55");
-console.log(typeof json);
+console.log(typeof json); // number
 
 // TYPE : any
 // disables type checking
@@ -26,8 +26,8 @@ console.log(typeof json);
 
 let u: any = true;
 u = "string"; 
-u.runANonExistentMethod();
-console.log(Math.round(u)); 
+// u.runANonExistentMethod();
+console.log(Math.round(u)); // NaN
 
 
 // TYPE : unknown
@@ -43,27 +43,27 @@ let value: any;
 
 value = 5;       // No error
 value = "hello"; // No error
-value.toFixed(2); // No error, even though `toFixed` is not valid for strings at runtime
+// value.toFixed(2); // No error, even though `toFixed` is not valid for strings at runtime
 
 //using unknown
 
 let value1: unknown;
 
 value1 = 5;       // No error
-value1 = "hello"; // No error
+// value1 = "hello"; // No error
 
 // value1.toFixed(2); // Error: Object is of type 'unknown'
 
-if (typeof value === "number") {
-    console.log(value.toFixed(2)); // Works because we've checked the type
+if (typeof value1 === "number") {
+    console.log(value1.toFixed(2)); // Works because we've checked the type // 5.00
 }
 
 // This will give no Error because any will nnot check anything.
 //But unknown is only assignable to unknown or any type.
 let b: any=  "a"; 
-console.log(b); 
+console.log(b);   // a
 let c: number= b; 
-console.log(c);
+console.log(c);  // a
 
 // TYPE : never
 function infiniteLoop(): never {

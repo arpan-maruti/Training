@@ -31,4 +31,4 @@ class Square extends Rectangle {
 
 const mySq = new Square(20);
 
-console.log(mySq.toString());
+console.log(mySq.toString()); // Square[width=20]
