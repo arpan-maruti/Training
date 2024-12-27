@@ -5,7 +5,7 @@ This repository contains projects, assignments, and examples created during the 
 
 ## Repository Structure
 
-### `00.html-css`
+### `html-css`
 This folder includes examples and assignments that cover foundational and advanced HTML and CSS topics.  
 #### **HTML Topics**:
 - Elements, Attributes, and Links
@@ -29,7 +29,7 @@ This folder includes examples and assignments that cover foundational and advanc
 
 ---
 
-### `01.assignment-1`
+### `assignment-1`
 This folder contains the **Infinite Scrolling Module Assignment**.  
 #### Highlights:
 - Developed a smooth infinite scrolling effect for logos.
@@ -38,7 +38,7 @@ This folder contains the **Infinite Scrolling Module Assignment**.
 
 ---
 
-### `02.javascript`
+### `javascript`
 This folder contains examples and exercises on various JavaScript topics.  
 #### **JavaScript Topics**:
 - `let`, `var`, `const`
@@ -58,7 +58,7 @@ This folder contains examples and exercises on various JavaScript topics.
 
 ---
 
-### `03.typescript`
+### `typescript`
 This folder includes projects and examples on TypeScript to build scalable and maintainable applications.  
 #### **TypeScript Topics**:
 - Basic Types: `any`, `enum`, and `null`
@@ -76,7 +76,7 @@ This folder includes projects and examples on TypeScript to build scalable and m
 1. **Clone the Repository**  
    Clone this repository to your local machine:  
    ```bash
-   git clone https://github.com/yourusername/training.git
+   git clone https://github.com/arpan-maruti/training.git
    ```
 
 2. **Open in Visual Studio Code (VS Code)**  
@@ -95,9 +95,9 @@ This folder includes projects and examples on TypeScript to build scalable and m
 
 ### For TypeScript Files
 1. **Navigate to the TypeScript Folder**  
-   Move to the `03.typescript` folder using the terminal:  
+   Move to the `typescript` folder using the terminal:  
    ```bash
-   cd path/to/03.typescript
+   cd path/to/typescript
    ```
 
 2. **Compile TypeScript Files**  
