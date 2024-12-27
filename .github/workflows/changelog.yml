@@ -17,7 +17,7 @@ jobs:
           gem install github_changelog_generator
           github_changelog_generator --user arpan-maruti --project Training
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.Arpan }}
       
       - name: Commit and push changelog
         run: |
