@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // Blur Event
     $("#test1").blur(function() {
-        $(this).css("background-color", "white");
+        $(this).css("background-color", "blue");
     });
 
     // Using .on() for multiple events (click and mouseenter)
