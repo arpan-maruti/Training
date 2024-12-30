@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="utf-8">
   <title>MyAngularApp</title>
@@ -9,5 +9,20 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Example of Templates  -->
+  <div ng-controller="MyController">
+    <h1>{{title}}</h1>
+    <input [value]="Username" ng-model="username" >
+    <p>Hello, {{username}}!</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('MyController', function($scope) {
+      $scope.title = "AngularJS Templates Example";
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>{{title}}</div>
+
+    <button (click)="changeTitle('my-Angular-Project-Changed-Button')">Click me!</button>
+    <br>
+    <!-- <a routerLink="/about">About Page</a> -->
+    <a [routerLink]="['/','about','1']">About Page</a>
+    <!-- <a (click)="navigate()">About Page</a> -->
+
+</body>
+</html>
