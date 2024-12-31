@@ -15,7 +15,7 @@ export class AboutComponent {
 
       this.route.params.subscribe({
         next: (params) => {
-          console.log(params['id']);
+          console.log(params['id']); //Output :1
         },
         error: (err) => {
           console.log(err);
