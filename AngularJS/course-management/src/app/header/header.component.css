@@ -1,0 +1,13 @@
+.navbar {
+    background-color:aliceblue;
+    
+}
+.navbar-nav {
+    margin-left: auto;
+    
+}
+
+#nav-last
+{
+    margin-right: 3rem;
+}

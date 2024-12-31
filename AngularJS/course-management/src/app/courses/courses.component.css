@@ -1,0 +1,24 @@
+
+
+.box
+{
+    background-color: white;
+    padding: 2vh 4vh;
+    height: 40vh;
+    width: 26rem;
+    .course-image
+    {
+        width: 100%;
+        height: 20vh;
+        background-color: #effeff;
+        background-size: 100%;
+        img
+        {
+            width: 19rem;
+            height: 90%;
+            margin: 1vh;
+        }
+       
+    }
+    
+}

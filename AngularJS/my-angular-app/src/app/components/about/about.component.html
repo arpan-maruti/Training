@@ -1,1 +1,15 @@
 <p>about works!</p>
+<!-- Interpolation Example -->
+<h1>Interpolation: {{ title }}</h1>
+<hr>
+<!-- Property Binding Example -->
+Property Binding: <img [src]="imageUrl" alt="Angular Logo" width="200" />
+<hr>
+<h1>Two-Way Binding Example</h1>
+
+  <!-- Two-way binding using [(ngModel)] -->
+  <input type="text" [(ngModel)]="title1" placeholder="Enter your name" />
+
+  <!-- Displaying the updated value -->
+  <p>Hello, {{ title1 }}!</p>
+<hr>
