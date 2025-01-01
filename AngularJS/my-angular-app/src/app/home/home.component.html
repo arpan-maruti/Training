@@ -6,10 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div>{{title}}</div>
-
-    <button (click)="changeTitle('my-Angular-Project-Changed-Button')">Click me!</button>
-    <br>
+    <h1>AngularJS</h1>
+    <hr>
     <!-- <a routerLink="/about">About Page</a> -->
     <a [routerLink]="['/','about','1']">Interpolation & Property Binding</a>
     <!-- <a (click)="navigate()">About Page</a> -->
@@ -17,5 +15,25 @@
     <a [routerLink]="['/','directives']">Directives</a>
     <br>
     <a [routerLink]="['/','lifecycle']">Component Lifecycle</a>
+    <br>
+    <a [routerLink]="['/','signals']">Signals</a>
+    <br>
+    <a [routerLink]="['/','service']">Service</a>
+    <br>
+    <a [routerLink]="['/','forms']">Template Driven Forms</a>
+    <br>
+    <a [routerLink]="['/','reactive-forms']">Reactive Forms</a>
+    <hr>
+    <h1>Example of Class</h1>
+    <p>ID: {{ user.id }}</p>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <hr>
+    <h1>Example of Interface</h1>
+    <p>ID: {{ user.id }}</p>
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <hr>
+
 </body>
 </html> 
