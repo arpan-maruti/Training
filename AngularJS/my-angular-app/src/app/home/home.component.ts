@@ -2,10 +2,12 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { User } from '../user';
 import { UserInterface } from '../user-interface';
+import { Comp1Component } from "../comp1/comp1.component";
+import { Comp2Component } from "../comp2/comp2.component";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, Comp1Component, Comp2Component],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

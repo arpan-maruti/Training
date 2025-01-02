@@ -8,6 +8,10 @@ import { ServiceComponentComponent } from './service-component/service-component
 import { FormsComponent } from './template-driven-forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { PipesComponent } from './pipes/pipes.component';
 export const routes: Routes = [
     // {path: '', redirectTo: 'home', pathMatch: 'full'},
     // {path: 'home', component: HomeComponent},
@@ -19,6 +23,10 @@ export const routes: Routes = [
     {path: 'service', component: ServiceComponentComponent},
     {path: 'forms', component: FormsComponent},
     {path: 'reactive-forms', component: ReactiveFormsComponent},
+    {path: 'httpclient', component: HttpclientComponent},
+    {path: 'component1', component: Comp1Component},
+    {path: 'component2', component: Comp2Component},
+    {path: 'pipes', component: PipesComponent},
     // {
     //     path: '',
     //     loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
