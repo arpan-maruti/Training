@@ -70,6 +70,54 @@ This folder includes projects and examples on TypeScript to build scalable and m
 
 ---
 
+### `angularjs`
+This folder contains projects and examples related to AngularJS.  
+#### **AngularJS Topics**:
+- Components
+- Interpolation
+- Template
+- Routing
+- Property Binding
+- Forms (Basic)
+- Directives
+- Events
+- Dependency Injection
+- Service
+- HTTP Client
+
+#### **Installation for AngularJS**:
+To get started with AngularJS, follow the steps below:
+
+1. **Install Node.js**:
+   If you haven't installed Node.js, download and install the latest LTS version from the official website: [Node.js Official Website](https://nodejs.org/).
+
+2. **Install Angular CLI**:
+   Once Node.js is installed, you can install the Angular CLI globally by running the following command in your terminal:
+   ```bash
+   npm install -g @angular/cli
+   ```
+
+3. **Create a New Angular Project**:
+   After installing the Angular CLI, you can create a new Angular project by running:
+   ```bash
+   ng new my-angular-app
+   ```
+
+4. **Navigate to Your Project Folder**:
+   Change to your project directory:
+   ```bash
+   cd my-angular-app
+   ```
+
+5. **Start the Development Server**:
+   You can now run the Angular application by executing:
+   ```bash
+   ng serve
+   ```
+   This will start the development server, and you can access your application in your web browser at `http://localhost:4200`.
+
+---
+
 ## Getting Started
 
 ### For HTML/CSS/JavaScript Files

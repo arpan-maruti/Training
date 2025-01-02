@@ -31,5 +31,4 @@ export class SignalsComponent {
       this.colours.update(value => [...value, 'yellow']);
       console.log(`{{colours}}`);
     }
-   
 }
