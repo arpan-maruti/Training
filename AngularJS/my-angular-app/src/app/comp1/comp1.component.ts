@@ -17,7 +17,8 @@ export class Comp1Component {
   constructor(private siblingService: SiblingService) {}
 
   sendData(): void {
+    setTimeout(() => {
     this.siblingService.setData(this.inputData);
-    console.log('Data sent to sibling component:', this.inputData);
+    console.log('Data sent to sibling component:', this.inputData)},5000);
   }
 }

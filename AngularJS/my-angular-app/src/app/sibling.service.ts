@@ -1,21 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable,  EventEmitter } from '@angular/core';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class SiblingService {
-  public data: string = ''; // Simple variable to store data
-  getData(): string {
-    console.log('Data received from sibling component:', this.data);
-    return this.data;
-  }
+  dataEmitter = new EventEmitter<string>();
+  
   setData(data: string): void {
-    
-    this.data = data;
-    console.log('Data sent to sibling component:', this.data);
-    this.getData();
+    this.dataEmitter.emit(data);
   }
-
  
 }

@@ -10,4 +10,6 @@ export class MypipePipe implements PipeTransform {
     return value.split('').reverse().join('');
   }
 
+  
+
 }

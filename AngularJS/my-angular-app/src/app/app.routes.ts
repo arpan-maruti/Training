@@ -10,14 +10,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { HttpclientComponent } from './httpclient/httpclient.component';
 import { Comp1Component } from './comp1/comp1.component';
-import { Comp2Component } from './comp2/comp2.component';
+import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 export const routes: Routes = [
-    // {path: '', redirectTo: 'home', pathMatch: 'full'},
-    // {path: 'home', component: HomeComponent},
+    // {path: 'about', redirectTo: 'home', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
     {path: '', component: HomeComponent},
     {path: 'about/1', component: AboutComponent},
-    {path: 'directives', component: DirectivesComponent},
+        {path: 'directives', component: DirectivesComponent,  children: [
+            { path: ':id', component: DirectivesComponent }
+        ]},
     {path: 'lifecycle', component: LifecycleComponent},
     {path: 'signals', component: SignalsComponent},
     {path: 'service', component: ServiceComponentComponent},
@@ -25,8 +28,9 @@ export const routes: Routes = [
     {path: 'reactive-forms', component: ReactiveFormsComponent},
     {path: 'httpclient', component: HttpclientComponent},
     {path: 'component1', component: Comp1Component},
-    {path: 'component2', component: Comp2Component},
-    {path: 'pipes', component: PipesComponent},
+    {path: 'pipes', component: ParentComponent},
+    {path: 'parentchild', component: ParentComponent},
+    { path: '**', component: PagenotfoundComponent }, 
     // {
     //     path: '',
     //     loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
@@ -36,3 +40,5 @@ export const routes: Routes = [
     //     loadComponent: () => import('./components/about/about.component').then(m => m.AboutComponent)
     // }
 ];
+
+
