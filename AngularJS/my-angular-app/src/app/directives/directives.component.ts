@@ -1,10 +1,10 @@
-import { CommonModule, NgFor, NgIf, NgSwitch } from '@angular/common';
+import { CommonModule, NgFor, NgIf, NgStyle, NgSwitch } from '@angular/common';
 import { Component } from '@angular/core';
 import { CustomDirectiveDirective } from '../custom-directive.directive';
 
 @Component({
   selector: 'app-directives',
-  imports: [NgIf,NgFor,NgSwitch, CommonModule, CustomDirectiveDirective],
+  imports: [NgIf,NgFor,NgSwitch, CommonModule, CustomDirectiveDirective,NgStyle],
   templateUrl: './directives.component.html',
   styleUrl: './directives.component.css'
 })

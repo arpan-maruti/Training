@@ -13,17 +13,17 @@ export class AboutComponent {
     title1: string = '';
     imageUrl: string = 'https://angular.io/assets/images/logos/angular/angular.svg';
     private route = inject(ActivatedRoute);
-    ngOnInit(){
-      const id=this.route.snapshot.paramMap.get('id');
-      console.log(id);
+    //ngOnInit(){
+      // const id=this.route.snapshot.paramMap.get('id');
+      // console.log(id);
 
-      this.route.params.subscribe({
-        next: (params) => {
-          console.log(params['id']); //Output :1
-        },
-        error: (err) => {
-          console.log(err);
-        }
-      })
-    }
+      // this.route.params.subscribe({
+      //   next: (params) => {
+      //     console.log(params['id']); //Output :1
+      //   },
+      //   error: (err) => {
+      //     console.log(err);
+      //   }
+      // })
+    //}
 }

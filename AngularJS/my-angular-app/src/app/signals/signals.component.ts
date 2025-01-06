@@ -16,18 +16,20 @@ export class SignalsComponent {
 
       effect(()=>{
         console.log('Count:', this.count());
+        
       });
       effect(()=>{
         console.log('Colours:', this.colours());
       });
-      
+
+     
     }
     ngOnInit() {
       console.log(this.count());
     }
     increase()
     {
-      this.count.set(this.count() + 1);
+      //this.count.set(this.count() + 1);
       this.colours.update(value => [...value, 'yellow']);
       console.log(`{{colours}}`);
     }
