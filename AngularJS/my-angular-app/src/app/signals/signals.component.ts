@@ -1,4 +1,4 @@
-import { Component, computed, signal, effect } from '@angular/core';
+import { Component, computed, signal, effect, untracked } from '@angular/core';
 
 @Component({
   selector: 'app-signals',
@@ -9,18 +9,16 @@ import { Component, computed, signal, effect } from '@angular/core';
 export class SignalsComponent {
     count = signal(0);
     colours = signal(['red', 'green', 'blue']);
+    compSignal = signal({id:1, name:"Arpan"})
     l = signal(5);
     w = signal(10);
     area = computed(() => this.l() * this.w());
     constructor(){
 
       effect(()=>{
-        console.log('Count:', this.count());
-        
+        console.log(`Count: ${this.count()}, Colours:${untracked(this.colours)}`);
       });
-      effect(()=>{
-        console.log('Colours:', this.colours());
-      });
+     
 
      
     }
@@ -29,8 +27,16 @@ export class SignalsComponent {
     }
     increase()
     {
-      //this.count.set(this.count() + 1);
-      this.colours.update(value => [...value, 'yellow']);
-      console.log(`{{colours}}`);
+      this.count.set(this.count() + 1);
+      // this.colours.update(value => [...value, 'yellow']);
+      console.log(`${this.colours()}`);
+    }
+
+    updateSignalByKey(key: string, value: any): void {
+      this.compSignal.update((current) => ({
+        ...current,
+        [key]: value 
+      }));
+      console.log("id:"+this.compSignal()["name"]);
     }
 }

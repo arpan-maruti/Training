@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 @Component({
   selector: 'app-parent',
@@ -14,5 +14,7 @@ export class ParentComponent {
   receiveMessage(message: string) {
     this.messageFromChild = message;  // Handling the message from the child
   }
-
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges: Component inputs changed.',changes["parentData"].previousValue);
+  }
 }

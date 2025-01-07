@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -13,5 +13,7 @@ export class ChildComponent {
   sendToParent() {
     this.messageEvent.emit('Hello from Child!');  // Emitting an event to the parent
   }
-
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges: Component inputs changed.',changes);
+}
 }

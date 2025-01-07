@@ -1,15 +1,19 @@
-import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, SimpleChange, SimpleChanges } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, Input, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy,  SimpleChanges } from '@angular/core';
+import { DestroyComponent } from '../destroy/destroy.component';
 
 @Component({
   selector: 'app-lifecycle',
-  imports: [],
+  imports: [NgIf, DestroyComponent],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.css'
 })
 export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
 {
   @Input() message: string = 'Initial Message';
-
+  showH1 = true;
+  destroyComponent: DestroyComponent | undefined ;
+  element:any;
   constructor() {
     console.log('Constructor: Component instance created.');
   }
