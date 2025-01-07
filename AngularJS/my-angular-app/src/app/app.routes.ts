@@ -19,7 +19,8 @@ export const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'about/1', component: AboutComponent},
         {path: 'directives', component: DirectivesComponent,  children: [
-            { path: ':id', component: DirectivesComponent }
+            // { path: ':id', component: DirectivesComponent }
+            { path: '1', component: DirectivesComponent }
         ]},
     {path: 'lifecycle', component: LifecycleComponent},
     {path: 'signals', component: SignalsComponent},
