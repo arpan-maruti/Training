@@ -4,7 +4,7 @@ import { DestroyComponent } from '../destroy/destroy.component';
 
 @Component({
   selector: 'app-lifecycle',
-  imports: [NgIf, DestroyComponent],
+  imports: [ DestroyComponent],
   templateUrl: './lifecycle.component.html',
   styleUrl: './lifecycle.component.css'
 })

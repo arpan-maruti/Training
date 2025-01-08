@@ -12,6 +12,7 @@ import { Comp1Component } from './comp1/comp1.component';
 import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MinitaskComponent } from './minitask/minitask.component';
 
 export const routes: Routes = [
     // {path: 'about', redirectTo: 'home', pathMatch: 'full'},
@@ -31,6 +32,7 @@ export const routes: Routes = [
     {path: 'component1', component: Comp1Component},
     {path: 'pipes', component: PipesComponent},
     {path: 'parentchild', component: ParentComponent},
+    {path: 'minitask', component: MinitaskComponent},
     { path: '**', component: PagenotfoundComponent }, 
     // {
     //     path: '',
