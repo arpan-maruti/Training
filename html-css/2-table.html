@@ -1,0 +1,39 @@
+<!-- table
+ colspan and rowspan -->
+ <table style="width: 100%;"> 
+    <caption> data</caption>
+    <tr>
+      <th style="width: 50%; height: 50px;" colspan="2">Company and contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+</table>
+
+<style>
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+        border-style: dashed;
+    }
+    th, td {
+        border-spacing: 200px;
+    }
+    tr:nth-child(even)
+    {
+        background-color: white;
+    }
+    tr:nth-child(odd)
+    {
+        background-color: rgb(100, 206, 233);
+    }
+    tr:hover {background-color: #4dfc4d;}
+</style>

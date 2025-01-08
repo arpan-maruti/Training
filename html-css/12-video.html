@@ -1,0 +1,48 @@
+<video id="myVideo" height="200px" width="400px" controls>
+    <source src="../Video.mp4" type="video/mp4">
+    Not Supported
+  </video>
+  
+  <hr>
+  <button id="playPauseBtn">Play</button>
+  <button id="muteBtn">Mute</button>
+  <button id="restartBtn">Restart</button>
+  <input type="range" id="volumeControl" value="100" max="100">
+  
+  <script>
+  
+    const video = document.getElementById('myVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const volumeControl = document.getElementById('volumeControl');
+    
+  
+    playPauseBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = 'Pause';
+      } else {
+        video.pause();
+        playPauseBtn.textContent = 'Play';
+      }
+    });
+  
+    muteBtn.addEventListener('click',()=>{
+      video.muted=!video.muted;
+      muteBtn.textContent=video.muted?"unmute":"mute";
+    });
+  
+    restartBtn.addEventListener('click',()=>{
+      video.currentTime=0;
+      video.play();
+      playPauseBtn.textContent="pause";
+    });
+  
+    volumeControl.addEventListener('input',(event)=>{
+      video.volume=event.target.value/100;
+    });
+  
+   
+  </script>
+  

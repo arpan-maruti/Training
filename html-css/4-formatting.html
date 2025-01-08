@@ -1,0 +1,73 @@
+<!-- textbox which takes an input -->
+ <!-- placeholder is used to show default data in the textfield  -->
+ <input type="text" placeholder="cat photo URL">
+ <!-- formatting -->
+ <em>This text is emphasized</em>
+ <hr>
+ <small>This is some smaller text.</small>
+ <hr>
+ <mark>mark</mark>
+ <hr>
+ <del> del command</del>
+ <ins>ins tag </ins>
+ <p>This is <sub>subscripted</sub> text.</p>
+ <p>This is <sup>superscripted</sup> text.</p>
+ <p>Short Quatation : <q>Build a future where people live in harmony with nature.</q></p>
+ <p>The Abbrevation <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+ <hr>
+ Bidirectional Override: <bdo dir="rtl">This text will be written from right to left</bdo>
+ <hr>
+
+ <!-- insert image and imagemap-->
+ <!-- area can be rect,poly,circle -->
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="logo" usemap="#workmap"> 
+<p><cite>Cite: </cite> by Edvard Munch. Painted in 1893.</p>
+<map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="#">
+</map>
+<hr>
+
+<picture>
+    <source media="(max-width:650px)" srcset="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="no image">
+    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-dog.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+<hr>
+
+<!-- anchor tag -->
+<a href="https://www.freecatphotoapp.com">cat photos</a>
+<!-- _self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window -->
+<style>
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:visited, a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+</style>
+
+<hr>
+
+<!-- jump to footer(we can jump to the webpage or any tag as well) -->
+<a href="#footer">Jump to Bottom"</a>
+<footer>
+<address>
+    Written by John Doe.<br> 
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+</address>
+<div id="footer">Copyright Cat Photo App</footer>

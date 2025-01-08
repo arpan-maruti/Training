@@ -99,8 +99,8 @@ footer {
   position: relative;
   /* animation-name: example;
   animation-duration: 4s;
-  animation-iteration-count: infinite; */
-  /* animation-delay: 2s; */
+  animation-iteration-count: infinite;
+  animation-delay: 2s; */
 }
 
 @keyframes example {
