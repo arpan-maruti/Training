@@ -20,7 +20,7 @@ export class MinitaskComponent {
   ngOnInit() {
     try {
       console.log('ngOnInit');
-      const storedTime = localStorage.getItem('Time7');
+      const storedTime = localStorage.getItem('Time8');
       if (storedTime) {
         const storedDate = new Date(storedTime);
         this.elapsedTime.set(storedDate.getTime());
@@ -93,17 +93,17 @@ export class MinitaskComponent {
   private updateDisplayedTime() {
     const currentDate = new Date(this.elapsedTime());
     this.showDate.set(
-      `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()} ` +
-      `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
+      `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ` +
+      `${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`
     );
   }
 
   private saveElapsedTime() {
     try {
       const currentDate = new Date(this.elapsedTime());
-      const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()} ` +
-                            `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
-      localStorage.setItem('Time7', formattedDate);
+      const formattedDate = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(currentDate.getDate()).padStart(2, '0')} ` +
+                `${String(currentDate.getHours()).padStart(2, '0')}:${String(currentDate.getMinutes()).padStart(2, '0')}:${String(currentDate.getSeconds()).padStart(2, '0')}`;
+      localStorage.setItem('Time8', formattedDate);
     } catch (e) {
       console.warn('Failed to save elapsed time:', e);
     }
