@@ -9,7 +9,4 @@ export class MypipePipe implements PipeTransform {
     if (!value) return '';
     return value.split('').reverse().join('');
   }
-
-  
-
 }

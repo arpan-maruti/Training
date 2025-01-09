@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DestroyComponent } from './destroy.component';
+import { LifecycleParentComponent } from './lifecycle-parent.component';
 
-describe('DestroyComponent', () => {
-  let component: DestroyComponent;
-  let fixture: ComponentFixture<DestroyComponent>;
+describe('LifecycleParentComponent', () => {
+  let component: LifecycleParentComponent;
+  let fixture: ComponentFixture<LifecycleParentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DestroyComponent]
+      imports: [LifecycleParentComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DestroyComponent);
+    fixture = TestBed.createComponent(LifecycleParentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

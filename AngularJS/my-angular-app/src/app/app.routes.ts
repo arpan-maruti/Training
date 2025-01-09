@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './components/property_binding/about.component';
+import { AboutComponent } from './property_binding/about.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { SignalsComponent } from './signals/signals.component';
@@ -13,6 +13,7 @@ import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MinitaskComponent } from './minitask/minitask.component';
+import { LifecycleParentComponent } from './lifecycle-parent/lifecycle-parent.component';
 
 export const routes: Routes = [
     // {path: 'about', redirectTo: 'home', pathMatch: 'full'},
@@ -33,6 +34,7 @@ export const routes: Routes = [
     {path: 'pipes', component: PipesComponent},
     {path: 'parentchild', component: ParentComponent},
     {path: 'minitask', component: MinitaskComponent},
+    {path: 'lifecycle-parent', component: LifecycleParentComponent},
     { path: '**', component: PagenotfoundComponent }, 
     // {
     //     path: '',

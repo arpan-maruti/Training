@@ -10,11 +10,6 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
   styleUrls: ['./reactive-forms.component.css'],
 })
 export class ReactiveFormsComponent {
-  // Define the FormGroup for the login form
-  userLogin(item:any)
-  {
-    console.log(item);
-  }
 
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required]),

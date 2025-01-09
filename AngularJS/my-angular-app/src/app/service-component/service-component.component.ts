@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserserviceService } from '../services/userservice.service';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-service-component',
   imports: [CommonModule],

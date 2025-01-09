@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SiblingService } from '../sibling.service';
-import { Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-comp2',

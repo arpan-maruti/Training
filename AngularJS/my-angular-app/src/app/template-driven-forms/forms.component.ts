@@ -5,12 +5,12 @@ import {  FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-forms',
   standalone: true,
-  imports: [FormsModule,CommonModule], // Import ReactiveFormsModule for reactive forms
+  imports: [FormsModule,CommonModule], 
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css'],
 })
 export class FormsComponent {
-  // Define the FormGroup for the login form
+  
   userLogin(item:any)
   {
     console.log(item);
