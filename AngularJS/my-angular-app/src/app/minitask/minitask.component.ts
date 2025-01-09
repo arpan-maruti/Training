@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 
 @Component({
   selector: 'app-minitask',
@@ -6,36 +6,65 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./minitask.component.css'],
 })
 export class MinitaskComponent {
-  elapsedTime: number = 0;
-  showDate: any;
-  private timerInterval: any;
-  private timerStarted: boolean = false;
+  elapsedTime = signal(0);
+  showDate = signal('');
+  private timerInterval: ReturnType<typeof setInterval> | null = null;
+  private timerStarted: boolean = false; 
+  yearDate = signal(0);
+  monthDate = signal(0);
+  dateDate = signal(0);
+  hourTime = signal(0);
+  minuteTime = signal(0);
+  secondTime = signal(0);
 
   ngOnInit() {
     try {
       console.log('ngOnInit');
-      const storedTime = localStorage.getItem('Time4');
+      const storedTime = localStorage.getItem('Time7');
       if (storedTime) {
-        this.elapsedTime = parseInt(storedTime, 10);
+        const storedDate = new Date(storedTime);
+        this.elapsedTime.set(storedDate.getTime());
+        this.setDateComponents(storedDate);
       } else {
-        this.elapsedTime = Date.now();
-        localStorage.setItem('Time4', this.elapsedTime.toString());
+        const currentTime = Date.now();
+        this.elapsedTime.set(currentTime);
+        this.setDateComponents(new Date(currentTime));
+        this.saveElapsedTime(); 
       }
-      this.showDate = new Date(this.elapsedTime).toLocaleTimeString();
+      this.updateDisplayedTime();
 
       if (!this.timerStarted) {
         this.startTimer();
         this.timerStarted = true;
       }
-
     } catch (e) {
       console.warn('LocalStorage operation failed:', e);
     }
   }
 
+  ngDoCheck() {
+    console.log('ngDoCheck');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit');
+  } 
+
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+  } 
+
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked');
+  }
+
   ngOnDestroy() {
     console.log('ngOnDestroy');
-    clearInterval(this.timerInterval);
+    this.stopTimer();
     this.saveElapsedTime();
   }
 
@@ -43,21 +72,51 @@ export class MinitaskComponent {
   beforeUnloadHandler(event: BeforeUnloadEvent) {
     console.log('unload');
     this.saveElapsedTime();
-    clearInterval(this.timerInterval);
+    this.stopTimer();
   }
 
   private startTimer() {
     this.timerInterval = setInterval(() => {
-      this.elapsedTime += 1000;
-      this.showDate = new Date(this.elapsedTime).toLocaleTimeString();
+      this.elapsedTime.set(this.elapsedTime() + 1000);
+      this.updateDisplayedTime();
+      this.setDateComponents(new Date(this.elapsedTime()));
     }, 1000);
+  }
+
+  private stopTimer() {
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    }
+  }
+
+  private updateDisplayedTime() {
+    const currentDate = new Date(this.elapsedTime());
+    this.showDate.set(
+      `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()} ` +
+      `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`
+    );
   }
 
   private saveElapsedTime() {
     try {
-      localStorage.setItem('Time4', this.elapsedTime.toString());
+      const currentDate = new Date(this.elapsedTime());
+      const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()} ` +
+                            `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+      localStorage.setItem('Time7', formattedDate);
     } catch (e) {
       console.warn('Failed to save elapsed time:', e);
     }
   }
+
+  private setDateComponents(date: Date) {
+    this.yearDate.set(date.getFullYear());
+    this.monthDate.set(date.getMonth() + 1); 
+    this.dateDate.set(date.getDate());
+    this.hourTime.set(date.getHours());
+    this.minuteTime.set(date.getMinutes());
+    this.secondTime.set(date.getSeconds());
+  }
+
+ 
 }
