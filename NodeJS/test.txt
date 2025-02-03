@@ -1,0 +1,2 @@
+Writing in file.
+Appending in file.
