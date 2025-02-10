@@ -23,6 +23,9 @@ fs1.readFile("./test.txt", "utf8", (err, data) => {
 const data = fs1.readFileSync("./test.txt", "utf8");
 console.log("Syncronus : " + data);
 
+const syncData= "App. data.";
+fs1.writeFileSync("./test.txt", syncData);  
+
 // readFile() - Promise - Asyncronus Version
 fs.readFile("./test.txt", "utf8")
   .then((data) => {

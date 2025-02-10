@@ -42,3 +42,6 @@ params.append("city", "Veraval");
 console.log(params); //output: URLSearchParams { 'name' => 'arpan', 'age' => '25', 'city' => 'Veraval' }
 params.delete("age");
 console.log(params); //output: URLSearchParams { 'name' => 'arpan', 'city' => 'Veraval' }
+
+//on server we can pars querystring by
+// const {query , pathname } =url.parse(req.url,true); 
