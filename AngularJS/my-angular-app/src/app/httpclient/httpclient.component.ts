@@ -20,7 +20,6 @@ export class HttpclientComponent {
     this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((data:any) => {
       console.log(data);
       this.userList=data;
-
     });
   }
 
