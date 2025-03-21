@@ -1,9 +1,10 @@
-import { useState } from 'react'
+
 import './App.css'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import JSXExample from './JSX/JSXExample'
 import ImportExport from './ImportExport/ImportExport' // Assuming you have this component
-import State from './state/State'
+import StateAndProps from './stateAndProps/StateAndProps'
+import ListAndKeys from './listAndKeys/ListAndKeys'
 function App() {
 
   return (
@@ -21,7 +22,10 @@ function App() {
               <Link to="/jsxexample">JSX</Link>
             </li>
             <li>
-              <Link to="/state">State</Link>
+              <Link to="/stateandprops">State & Props</Link>
+            </li>
+            <li>
+              <Link to="/listandkeys">List & Keys</Link>
             </li>
           </ul>
         </nav>
@@ -31,7 +35,8 @@ function App() {
         <Route path="/" element={<h1>React Example</h1>} />
         <Route path="/importexport" element={<ImportExport />} />
         <Route path="/jsxexample" element={<JSXExample />} />
-        <Route path="/state" element={<State />} />
+        <Route path="/stateandprops" element={<StateAndProps />} />
+        <Route path="/listandkeys" element={<ListAndKeys />} />
       </Routes>
     </Router>
   )

@@ -66,6 +66,7 @@ export default function JSXExample() {
         style={{ width: '150px', height: '150px' }}
       />
       <br />
+      <hr />
       {/* 7. Using input field with state */}
       <input 
         type="text" 
@@ -74,7 +75,8 @@ export default function JSXExample() {
         placeholder="Type something"
       />
       <p>You typed: {inputValue}</p>
-
+      <button onClick={() => setInputValue('')}>Clear</button>
+      <hr />
       Event Handler Function: <button onClick={callFn}>Click</button>
       <br />
       Event Handler Function With Parameters: <button onClick={()=>callFnWithParam("hello1")}>Click</button>
