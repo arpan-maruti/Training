@@ -42,7 +42,7 @@ class LifecycleDemo extends Component {
     console.log('  snapshot:', snapshot);
   }
 
-
+  // Called just before the component is removed from the DOM
   componentWillUnmount() {
     console.log('10. componentWillUnmount()');
   }

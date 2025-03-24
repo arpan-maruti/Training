@@ -40,7 +40,7 @@ function App() {
         <Route path="/jsxexample" element={<JSXExample />} />
         <Route path="/stateandprops" element={<StateAndProps />} />
         <Route path="/listandkeys" element={<ListAndKeys />} />
-        <Route path="/classlifecycle" element={<ClassLifecycle name="raag" />} />
+        <Route path="/classlifecycle" element={<ClassLifecycle/>} />
         <Route path="/functionlifecycle" element={<FunctionalLifecycle />} />
       </Routes>
     </Router>
