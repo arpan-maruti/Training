@@ -1,6 +1,3 @@
-import { useState } from 'react'
-
-
 export default function JSXExample() {
   // Variables
   const name = 'John';
@@ -31,8 +28,6 @@ export default function JSXExample() {
   // Array
   const fruits = ['Apple', 'Banana', 'Cherry'];
 
-  // Input state management
-  const [inputValue, setInputValue] = useState('');
 
   return (
     <div>
@@ -67,16 +62,7 @@ export default function JSXExample() {
       />
       <br />
       <hr />
-      {/* 7. Using input field with state */}
-      <input 
-        type="text" 
-        value={inputValue} 
-        onChange={(e) => setInputValue(e.target.value)} 
-        placeholder="Type something"
-      />
-      <p>You typed: {inputValue}</p>
-      <button onClick={() => setInputValue('')}>Clear</button>
-      <hr />
+     
       Event Handler Function: <button onClick={callFn}>Click</button>
       <br />
       Event Handler Function With Parameters: <button onClick={()=>callFnWithParam("hello1")}>Click</button>

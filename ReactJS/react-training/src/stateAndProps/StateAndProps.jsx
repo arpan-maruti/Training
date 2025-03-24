@@ -19,7 +19,6 @@ export default function State() {
       <hr />
       <button onClick={() => setToggle(!toggle)}>Toggle</button>
       {toggle ? <h1>Hide & Show</h1> : null}
-      <hr />
       <Form />
       <hr />
     </>

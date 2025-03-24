@@ -109,8 +109,8 @@ export default function Form() {
           Female
         </label>
       </div>
-       {/* Dropdown for State */}
-       <div>
+      {/* Dropdown for State */}
+      <div>
         <label htmlFor="state">State:</label>
         <select
           id="state"

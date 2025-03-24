@@ -2,9 +2,10 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import JSXExample from './JSX/JSXExample'
-import ImportExport from './ImportExport/ImportExport' // Assuming you have this component
 import StateAndProps from './stateAndProps/StateAndProps'
 import ListAndKeys from './listAndKeys/ListAndKeys'
+import ClassLifecycle from './Lifecycle/ClassLifecycle'
+import FunctionalLifecycle from './Lifecycle/FunctionalLifeCycle'
 function App() {
 
   return (
@@ -16,9 +17,6 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/importexport">Import-Export</Link>
-            </li>
-            <li>
               <Link to="/jsxexample">JSX</Link>
             </li>
             <li>
@@ -27,16 +25,23 @@ function App() {
             <li>
               <Link to="/listandkeys">List & Keys</Link>
             </li>
+            <li>
+              <Link to="/classlifecycle">Lifecycle-Class</Link>
+            </li>
+            <li>
+              <Link to="/functionlifecycle">Lifecycle-Function</Link>
+            </li>
           </ul>
         </nav>
       </div>
 
       <Routes>
         <Route path="/" element={<h1>React Example</h1>} />
-        <Route path="/importexport" element={<ImportExport />} />
         <Route path="/jsxexample" element={<JSXExample />} />
         <Route path="/stateandprops" element={<StateAndProps />} />
         <Route path="/listandkeys" element={<ListAndKeys />} />
+        <Route path="/classlifecycle" element={<ClassLifecycle name="raag" />} />
+        <Route path="/functionlifecycle" element={<FunctionalLifecycle />} />
       </Routes>
     </Router>
   )
