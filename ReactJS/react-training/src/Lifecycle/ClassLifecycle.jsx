@@ -4,6 +4,7 @@ class LifecycleDemo extends Component {
   constructor(props) {
     super(props);
     console.log('1. constructor()');
+    console.log('  props:', props); // Logging props
     this.state = {
       count: 0,
     };
@@ -27,7 +28,6 @@ class LifecycleDemo extends Component {
     return true; 
   }
 
-
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log('8. getSnapshotBeforeUpdate()');
     console.log('  prevProps:', prevProps);
@@ -42,11 +42,9 @@ class LifecycleDemo extends Component {
     console.log('  snapshot:', snapshot);
   }
 
-  // Called just before the component is removed from the DOM
   componentWillUnmount() {
     console.log('10. componentWillUnmount()');
   }
-
 
   increment = () => {
     this.setState(prevState => ({ count: prevState.count + 1 }));
@@ -56,6 +54,7 @@ class LifecycleDemo extends Component {
     console.log('3. render()');
     return (
       <div>
+        <h1>Name: {this.props.name}</h1> {/* Display the name prop */}
         <h1>Count: {this.state.count}</h1>
         <button onClick={this.increment}>Increment</button>
       </div>
