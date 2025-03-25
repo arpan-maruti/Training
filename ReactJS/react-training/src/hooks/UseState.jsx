@@ -7,6 +7,8 @@ export default function UseState(){
   
     return (
       <div>
+        <h1>useState</h1>
+        <hr />
         <h1>Count: {count}</h1>
         <button onClick={increment} style={{margin:'5px'}}>increase</button>
         <button onClick={decrement}>decrease</button>

@@ -9,6 +9,7 @@ import Header from './Header';
 import UseStateHook from './hooks/UseState';
 import UseEffect from './hooks/UseEffect';
 import UseContext from './hooks/UseContext';
+import UseRef from './hooks/UseRef';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path="/hooks/usestate" element={<UseStateHook />} />
         <Route path="/hooks/useeffect" element={<UseEffect />} />
         <Route path="/hooks/usecontext" element={<UseContext />} />
-
+        <Route path="/hooks/useref" element={<UseRef />} />
         <Route path="*" element={<h1> No page Found </h1>} />
       </Routes>
     </Router>

@@ -37,6 +37,7 @@ export default function Header() {
                 <li><Link to="/hooks/usestate">useState</Link></li>
                 <li><Link to="/hooks/useeffect">useEffect</Link></li>
                 <li><Link to="/hooks/usecontext">useContext</Link></li>
+                <li><Link to="/hooks/useRef">useRef</Link></li>
               </ul>
             )}
           </li>

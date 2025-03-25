@@ -31,6 +31,8 @@ const UseEffectDemo = () => {
 
   return (
     <div>
+       <h1>useEffect</h1>
+       <hr />
       <h2>Text: {text}</h2>
       <input value={text} onChange={(e) => setText(e.target.value)} placeholder="Type something..." />
 

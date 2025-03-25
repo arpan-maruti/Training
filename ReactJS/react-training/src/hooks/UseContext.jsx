@@ -7,6 +7,8 @@ export default function UseContext() {
 
   return(
   <>
+    <h1>useContext</h1>
+    <hr />
     <UserContext.Provider value={name}>
       <A />
     </UserContext.Provider>
