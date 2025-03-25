@@ -12,7 +12,6 @@ export default function State() {
 
   return (
     <>
-      {/* passing jsx and styles */}
       <Counter handleCount={handleCount} count={count} color="green">
         <h1> passing jsx with props </h1>
       </Counter> 
