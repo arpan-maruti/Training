@@ -1,33 +1,45 @@
-import { useContext, createContext } from "react";
+import { useContext, createContext, useState } from "react";
 
+// Create Context
 const UserContext = createContext();
 
 export default function UseContext() {
-  const name = "arpan";
+  let name = "Arpan";
 
-  return(
-  <>
-    <h1>useContext</h1>
-    <hr />
-    <UserContext.Provider value={name}>
-      <A />
-    </UserContext.Provider>
-  </>
-  );
-}
+  console.log("UseContext (A) Rendered");
 
-function A() {
   return (
     <>
-      <B />
+      <h1>useContext Example</h1>
+      <hr />
+      <UserContext.Provider value={name}>
+        <A />
+        <button
+          onClick={() => {
+            name = name + "hi";
+            console.log(name);
+          }}
+        >
+          Change Name
+        </button>
+      </UserContext.Provider>
     </>
   );
 }
 
+function A() {
+  console.log("Component A Rendered");
+  return <B />;
+}
+
 function B() {
-  const name = useContext(UserContext);
-  return(
-   <>User Name: {name}</>
-  );
-  
+  console.log("Component B Rendered");
+  return <C />;
+}
+
+function C() {
+  const name = useContext(UserContext); 
+  console.log("Component C Rendered");
+
+  return <h2>User Name: {name}</h2>;
 }

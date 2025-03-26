@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -26,18 +26,39 @@ export default function Header() {
           <li>
             <Link to="/functionlifecycle">Lifecycle-Function</Link>
           </li>
-          <li 
-            className="dropdown" 
-            onMouseEnter={() => setShowDropdown(true)} 
+          <li
+            className="dropdown"
+            onMouseEnter={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
             <Link to="#">Hooks ▼</Link>
             {showDropdown && (
               <ul className="dropdown-menu">
-                <li><Link to="/hooks/usestate">useState</Link></li>
-                <li><Link to="/hooks/useeffect">useEffect</Link></li>
-                <li><Link to="/hooks/usecontext">useContext</Link></li>
-                <li><Link to="/hooks/useRef">useRef</Link></li>
+                <li>
+                  <Link to="/hooks/usestate">useState</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useeffect">useEffect</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/usecontext">useContext</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useRef">useRef</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useReducer">useReducer</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useLayoutEffect">useLayoutEffect & useInsertionEffect</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useMemo">useMemo</Link>
+                </li>
+                <li>
+                  <Link to="/hooks/useCallback">useCallback</Link>
+                </li>
+                
               </ul>
             )}
           </li>
