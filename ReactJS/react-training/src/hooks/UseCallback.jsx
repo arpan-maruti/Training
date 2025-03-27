@@ -1,25 +1,21 @@
 import React, { useState, useCallback } from "react";
 
-const Button = ({ handleClick }) => {
-  console.log("Button component re-rendered");
+const Button = React.memo(({ handleClick }) => {
+  console.log("Button rendered");
   return <button onClick={handleClick}>Click Me</button>;
-};
+});
 
-const Counter = () => {
+export default function App() {
   const [count, setCount] = useState(0);
-  const [otherState, setOtherState] = useState(false);
 
-  const increment = useCallback(() => {
+  const handleClick = useCallback(() => {
     setCount((prev) => prev + 1);
   }, []);
 
   return (
     <div>
       <h2>Count: {count}</h2>
-      <Button handleClick={increment} />
-      <button onClick={() => setOtherState(!otherState)}>Re-render Parent</button>
+      <Button handleClick={handleClick} />
     </div>
   );
-};
-
-export default Counter;
+}

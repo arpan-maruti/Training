@@ -6,7 +6,7 @@ import React, {
   useRef,
 } from "react";
 
-export default function UseEffectVsUseLayoutEffectVsUseInsertionEffect() {
+export default function UseLayoutEffect() {
   const [toggle, setToggle] = useState(false);
 
   const effectRef = useRef();
