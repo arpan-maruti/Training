@@ -1,0 +1,14 @@
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.deps.json
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.runtimeconfig.json
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.dll
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/bin/Debug/net9.0/ConsoleApp1.pdb
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfoInputs.cache
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.AssemblyInfo.cs
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.csproj.CoreCompileInputs.cache
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.dll
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/refint/ConsoleApp1.dll
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.pdb
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.genruntimeconfig.cache
+/home/arpan/RiderProjects/ConsoleApp1/ConsoleApp1/obj/Debug/net9.0/ref/ConsoleApp1.dll
