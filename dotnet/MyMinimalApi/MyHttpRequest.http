@@ -8,17 +8,17 @@ Content-Type: application/json
 
 {
   "name": "Complete .NET API",
-  "dueDate": "2025-04-01T12:00:00Z",
+  "dueDate": "2030-04-01",
   "isCompleted": false
 }
 
 
 ### 3️⃣ Retrieve a todo by ID (Replace `1` with actual ID)
-GET http://localhost:5017/todos/1
+GET http://localhost:5017/todos/2
 
 
 ### 4️⃣ Update a todo (Replace `1` with actual ID)
-PUT http://localhost:5017/todos/6
+PUT http://localhost:5017/todos/1
 Content-Type: application/json
 
 {
@@ -30,3 +30,6 @@ Content-Type: application/json
 
 ### 5️⃣ Delete a todo (Replace `1` with actual ID)
 DELETE http://localhost:5017/todos/5
+
+### 3️⃣ Retrieve a todo by tasks redirection ID
+GET http://localhost:5017/tasks/2

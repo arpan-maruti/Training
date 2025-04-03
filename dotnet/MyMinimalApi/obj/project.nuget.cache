@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xxAc+E2/V5A=",
+  "dgSpecHash": "JUt7c3tVu8E=",
   "success": true,
   "projectFilePath": "/home/arpan/RiderProjects/MyMinimalApi/MyMinimalApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/arpan/.nuget/packages/microsoft.netcore.app.ref/8.0.13/microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
+    "/home/arpan/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.13/microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512",
+    "/home/arpan/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.13/microsoft.netcore.app.host.linux-x64.8.0.13.nupkg.sha512"
+  ],
   "logs": []
 }

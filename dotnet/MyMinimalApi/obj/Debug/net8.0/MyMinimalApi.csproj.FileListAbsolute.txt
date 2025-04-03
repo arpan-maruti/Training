@@ -23,3 +23,6 @@
 /home/arpan/RiderProjects/MyMinimalApi/obj/Debug/net8.0/MyMinimalApi.pdb
 /home/arpan/RiderProjects/MyMinimalApi/obj/Debug/net8.0/MyMinimalApi.genruntimeconfig.cache
 /home/arpan/RiderProjects/MyMinimalApi/obj/Debug/net8.0/ref/MyMinimalApi.dll
+/home/arpan/RiderProjects/MyMinimalApi/bin/Debug/net8.0/MyMinimalApi.staticwebassets.endpoints.json
+/home/arpan/RiderProjects/MyMinimalApi/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/arpan/RiderProjects/MyMinimalApi/obj/Debug/net8.0/staticwebassets/msbuild.MyMinimalApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

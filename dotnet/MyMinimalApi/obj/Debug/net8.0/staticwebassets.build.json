@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "R1nogbKJIeON+GgoNptqnl2cVsm7plwJ0LGfGlGjO5M=",
+  "Hash": "pSn4YHkQi3zRxLok6Z80sVdF1HCu/fIN8VLgqywP2hg=",
   "Source": "MyMinimalApi",
   "BasePath": "_content/MyMinimalApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
