@@ -16,8 +16,14 @@ public class CustomersController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult CreateCustomer(CustomerCreateRequest request)
+    public IActionResult CreateCustomer([FromBody] CustomerCreateRequest request)
     {
+        Console.WriteLine("CustomerValidator initialized!");
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        Console.WriteLine("CustomerValidator initialized!   1   ");
         var customer = _customerService.AddCustomer(
             request.FirstName, 
             request.LastName, 
@@ -25,7 +31,7 @@ public class CustomersController : ControllerBase
             request.Phone, 
             request.Email);
         return CreatedAtAction(nameof(GetCustomer), new { id = customer.CustomerId }, customer);
-    }
+    }   
 
     [HttpGet]
     public IActionResult GetAllCustomers()

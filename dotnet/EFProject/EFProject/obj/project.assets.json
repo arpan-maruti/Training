@@ -5358,11 +5358,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj",
+      "projectUniqueName": "D:\\Repositories\\Training\\dotnet\\EFProject\\EFProject\\EFProject.csproj",
       "projectName": "EFProject",
-      "projectPath": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj",
+      "projectPath": "D:\\Repositories\\Training\\dotnet\\EFProject\\EFProject\\EFProject.csproj",
       "packagesPath": "C:\\Users\\Arpan Rupareliya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\obj\\",
+      "outputPath": "D:\\Repositories\\Training\\dotnet\\EFProject\\EFProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Arpan Rupareliya\\AppData\\Roaming\\NuGet\\NuGet.Config"

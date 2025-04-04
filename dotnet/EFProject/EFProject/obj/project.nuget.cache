@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YmDSL4f0WhM=",
+  "dgSpecHash": "h783LvyCmf8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj",
+  "projectFilePath": "D:\\Repositories\\Training\\dotnet\\EFProject\\EFProject\\EFProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arpan Rupareliya\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Arpan Rupareliya\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
