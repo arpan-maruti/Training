@@ -24,6 +24,10 @@ builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<OrderDetailService>();
 builder.Services.AddScoped<ProductService>();
 // Add controllers
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+});
 builder.Services.AddControllers()
     .AddFluentValidation(fv => 
     {
