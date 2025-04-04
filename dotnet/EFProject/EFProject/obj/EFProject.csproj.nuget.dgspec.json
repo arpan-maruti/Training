@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/arpan/RiderProjects/EFProject/EFProject/EFProject.csproj": {}
+    "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj": {}
   },
   "projects": {
-    "/home/arpan/RiderProjects/EFProject/EFProject/EFProject.csproj": {
+    "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arpan/RiderProjects/EFProject/EFProject/EFProject.csproj",
+        "projectUniqueName": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj",
         "projectName": "EFProject",
-        "projectPath": "/home/arpan/RiderProjects/EFProject/EFProject/EFProject.csproj",
-        "packagesPath": "/home/arpan/.nuget/packages/",
-        "outputPath": "/home/arpan/RiderProjects/EFProject/EFProject/obj/",
+        "projectPath": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\EFProject.csproj",
+        "packagesPath": "C:\\Users\\Arpan Rupareliya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arpan Rupareliya\\RiderProjects\\EFProject\\EFProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/arpan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Arpan Rupareliya\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -44,6 +44,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.5.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -100,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/arpan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
